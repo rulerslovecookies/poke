@@ -1,7 +1,11 @@
 import json
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
-
+language= input("select language (english/japenese/chinese/french)")
+for pokemon in data:
+    print(data[pokemon]['name'][language])
+import json
+pokedex = open("./moves.json", encoding="utf8")
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
 
 # Add a language choice feature and print the pokemons name based on the user input
