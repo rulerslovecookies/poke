@@ -11,6 +11,12 @@ for pokemon in data:
         print(pokemon['name']['chinese'])
     if language=='french':
         print(pokemon['name']['french'])
+def pokemon_type():
+    find_type=input("what pokemon type you want to find?")
+    for pokemon in data:
+        if type in pokemon['type']:
+            print(pokemon['name'][language])
+pokemon_type()
 
 #import json
 #pokedex = open("./moves.json", encoding="utf8")
@@ -24,4 +30,3 @@ for pokemon in data:
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 #Based on user input, show all moves that a pokemon could learn based on their type. For example, if Charizard is fire/fyling, show all fire and flying moves. HINT import the moves.json file too!
-
