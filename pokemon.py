@@ -9,16 +9,18 @@ def print_pokemon():
         else:
             print ("language not found")
             break
-    
-# def pokemon_type():
-#     find_type=input("what pokemon type you want to find?")
+def pokemon_type():
+     find_type=input("what pokemon type you want to find?")
+     for pokemon in data:
+         if find_type in pokemon['type']:
+             print(pokemon['name'][language])
+pokemon_type()
+# def name_pokemon():
+#     find_pokemon= input("what Pokemon are you searching for?")
 #     for pokemon in data:
-#         if find_type in pokemon['type']:
+#         if find_pokemon in pokemon['name']:
 #             print(pokemon['name'][language])
-# pokemon_type()
-def name_pokemon():
-    find_pokemon= input("what Pokemon are you searching for?")
-    if find_pokemon in pokemon:
+# name_pokemon()
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.(done)
 # Add a language choice feature and print the pokemons name based on the user input (done)
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user(done)
