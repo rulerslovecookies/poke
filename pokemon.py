@@ -22,6 +22,7 @@ print_pokemon()
 #          if find_pokemon in pokemon['name']:
 #              print(pokemon['name'][language])
 # name_pokemon()
+def moves():                                    
 
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.(done)
 # Add a language choice feature and print the pokemons name based on the user input (done)
