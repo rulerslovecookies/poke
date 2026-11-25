@@ -1,6 +1,8 @@
 import json
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
+moves= open("./moves.json", encoding="utf8")
+data2= json.load(moves)
 language= input("select language (english/japanese/chinese/french)")
 def print_pokemon():
     for pokemon in data:
@@ -8,20 +10,24 @@ def print_pokemon():
             print(pokemon['name'][language])
         else:
             print ("language not found")
-            break
+            
 print_pokemon()
 def pokemon_type():
-        find_type=input("what pokemon type you want to find?")
+        find_type=input("what pokemon type you want to find?").capitalize()
         for pokemon in data:
           if find_type in pokemon['type']:
               print(pokemon['name'][language])
         else:
-              if find_type in pokemon ['type']:
-            
-                print("there no pokemon for that type buddy")
+            print("there no pokemon for that type buddy")
 pokemon_type()    
 
+# find_moves= input('what pokemon you wanna find moves for?')
+# def pokemon_moves():
+#     for moves in data:
+#         if moves 
 
+
+# pokemon_moves()
 # def name_pokemon():
 #     find_pokemon= input("what Pokemon are you searching for?")
 #     for pokemon in data:
